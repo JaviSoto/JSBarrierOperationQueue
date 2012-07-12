@@ -24,6 +24,16 @@ or
 - (void)addBarrierOperationWithBlock:(void (^)(void))block;
 ```
 
+- This behaves like ```dispatch_barrier_async()``` because it doesn't block the calling thread. If you want the same behaviour as ```dispatch_barrier_sync```, you can just do:
+
+```objc
+JSBarrierOperationQueue *queue = ...
+NSOperation *operation = ...
+
+[queue addBarrierOperation:operation];
+[operation waitUntilFinished];
+```
+
 ## Tests
 - You can run the tests with:
 
