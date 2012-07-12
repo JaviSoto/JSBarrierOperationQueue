@@ -1,6 +1,10 @@
 ## JSBarrierOperationQueue
 ```JSBarrierOperationQueue``` is an ```NSOperationQueue``` subclass that allows you to add operations that behave as a barrier. Basically providing the same functionality ```dispatch_barrier_async``` provides in the ```GCD``` world.
 
+Quote from ```dispatch_barrier_async``` documentation:
+
+>Calls to this function always return immediately after the block has been submitted and never wait for the block to be invoked. When the barrier block reaches the front of a private concurrent queue, it is not executed immediately. Instead, the queue waits until its currently executing blocks finish executing. At that point, the barrier block executes by itself. Any blocks submitted after the barrier block are not executed until the barrier block completes.
+
 ## Usage
 
 - Clone the repository using
