@@ -108,7 +108,7 @@ while( (expr) == NO ) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithT
 - (void)testAddingANormalOperationWorks
 {
     __block BOOL done = NO;
-    NSTimeInterval duration = 2.0;
+    NSTimeInterval duration = kDefaultOperationDuration;
     
     _OperationMock *op = [_OperationMock operationMockWithDuration:duration];
     op.completionBlock = ^{
