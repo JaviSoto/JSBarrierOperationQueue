@@ -43,7 +43,7 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
 
 @implementation JSBarrierOperationQueue
 
-#pragma mark - adding barrier operations
+#pragma mark - Public
 
 - (void)addBarrierOperation:(NSOperation *)operation
 {
@@ -51,7 +51,6 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
     {
         [operation setIsBarrierOperation];
         
-        #warning what if another thread calls add operation while this is running?
         for (NSOperation *op in self.operations)
         {
             // Make this operation wait until the currently executing operations finish
