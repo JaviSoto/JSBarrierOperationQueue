@@ -7,59 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D4F5D9615AE81A500369131 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9515AE81A500369131 /* UIKit.framework */; };
-		1D4F5D9815AE81A500369131 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9715AE81A500369131 /* Foundation.framework */; };
-		1D4F5D9A15AE81A500369131 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9915AE81A500369131 /* CoreGraphics.framework */; };
-		1D4F5DA015AE81A500369131 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4F5D9E15AE81A500369131 /* InfoPlist.strings */; };
-		1D4F5DA215AE81A500369131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DA115AE81A500369131 /* main.m */; };
-		1D4F5DA615AE81A500369131 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DA515AE81A500369131 /* JSAppDelegate.m */; };
 		1D4F5DAE15AE81A500369131 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5DAD15AE81A500369131 /* SenTestingKit.framework */; };
 		1D4F5DAF15AE81A500369131 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9515AE81A500369131 /* UIKit.framework */; };
 		1D4F5DB015AE81A500369131 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9715AE81A500369131 /* Foundation.framework */; };
 		1D4F5DB815AE81A500369131 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4F5DB615AE81A500369131 /* InfoPlist.strings */; };
 		1D4F5DBB15AE81A500369131 /* JSBarrierOperationQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */; };
+		1D4F5DC715AE829F00369131 /* JSBarrierOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DC615AE829F00369131 /* JSBarrierOperationQueue.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1D4F5DB115AE81A500369131 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D4F5D8815AE81A400369131 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D4F5D9015AE81A500369131;
-			remoteInfo = JSBarrierOperationQueue;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1D4F5D9115AE81A500369131 /* JSBarrierOperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSBarrierOperationQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4F5D9515AE81A500369131 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D4F5D9715AE81A500369131 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D4F5D9915AE81A500369131 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1D4F5D9D15AE81A500369131 /* JSBarrierOperationQueue-Info.plist */ = {isa = PBXFileReference; path = "JSBarrierOperationQueue-Info.plist"; sourceTree = "<group>"; };
-		1D4F5D9F15AE81A500369131 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D4F5DA115AE81A500369131 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1D4F5DA315AE81A500369131 /* JSBarrierOperationQueue-Prefix.pch */ = {isa = PBXFileReference; path = "JSBarrierOperationQueue-Prefix.pch"; sourceTree = "<group>"; };
-		1D4F5DA415AE81A500369131 /* JSAppDelegate.h */ = {isa = PBXFileReference; path = JSAppDelegate.h; sourceTree = "<group>"; };
-		1D4F5DA515AE81A500369131 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		1D4F5DA315AE81A500369131 /* JSBarrierOperationQueue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSBarrierOperationQueue-Prefix.pch"; sourceTree = "<group>"; };
 		1D4F5DAC15AE81A500369131 /* JSBarrierOperationQueueTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSBarrierOperationQueueTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4F5DAD15AE81A500369131 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1D4F5DB515AE81A500369131 /* JSBarrierOperationQueueTests-Info.plist */ = {isa = PBXFileReference; path = "JSBarrierOperationQueueTests-Info.plist"; sourceTree = "<group>"; };
+		1D4F5DB515AE81A500369131 /* JSBarrierOperationQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSBarrierOperationQueueTests-Info.plist"; sourceTree = "<group>"; };
 		1D4F5DB715AE81A500369131 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D4F5DB915AE81A500369131 /* JSBarrierOperationQueueTests.h */ = {isa = PBXFileReference; path = JSBarrierOperationQueueTests.h; sourceTree = "<group>"; };
 		1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBarrierOperationQueueTests.m; sourceTree = "<group>"; };
+		1D4F5DC515AE829F00369131 /* JSBarrierOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBarrierOperationQueue.h; sourceTree = SOURCE_ROOT; };
+		1D4F5DC615AE829F00369131 /* JSBarrierOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBarrierOperationQueue.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D4F5D8E15AE81A500369131 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4F5D9615AE81A500369131 /* UIKit.framework in Frameworks */,
-				1D4F5D9815AE81A500369131 /* Foundation.framework in Frameworks */,
-				1D4F5D9A15AE81A500369131 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D4F5DA815AE81A500369131 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,7 +56,6 @@
 		1D4F5D9215AE81A500369131 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D4F5D9115AE81A500369131 /* JSBarrierOperationQueue.app */,
 				1D4F5DAC15AE81A500369131 /* JSBarrierOperationQueueTests.octest */,
 			);
 			name = Products;
@@ -106,8 +75,7 @@
 		1D4F5D9B15AE81A500369131 /* JSBarrierOperationQueue */ = {
 			isa = PBXGroup;
 			children = (
-				1D4F5DA415AE81A500369131 /* JSAppDelegate.h */,
-				1D4F5DA515AE81A500369131 /* JSAppDelegate.m */,
+				1D4F5DC415AE81E400369131 /* JSBarrierOperationQueue */,
 				1D4F5D9C15AE81A500369131 /* Supporting Files */,
 			);
 			path = JSBarrierOperationQueue;
@@ -116,9 +84,6 @@
 		1D4F5D9C15AE81A500369131 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D4F5D9D15AE81A500369131 /* JSBarrierOperationQueue-Info.plist */,
-				1D4F5D9E15AE81A500369131 /* InfoPlist.strings */,
-				1D4F5DA115AE81A500369131 /* main.m */,
 				1D4F5DA315AE81A500369131 /* JSBarrierOperationQueue-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -127,7 +92,6 @@
 		1D4F5DB315AE81A500369131 /* JSBarrierOperationQueueTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D4F5DB915AE81A500369131 /* JSBarrierOperationQueueTests.h */,
 				1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */,
 				1D4F5DB415AE81A500369131 /* Supporting Files */,
 			);
@@ -143,26 +107,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D4F5DC415AE81E400369131 /* JSBarrierOperationQueue */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F5DC515AE829F00369131 /* JSBarrierOperationQueue.h */,
+				1D4F5DC615AE829F00369131 /* JSBarrierOperationQueue.m */,
+			);
+			name = JSBarrierOperationQueue;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D4F5D9015AE81A500369131 /* JSBarrierOperationQueue */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D4F5DBE15AE81A500369131 /* Build configuration list for PBXNativeTarget "JSBarrierOperationQueue" */;
-			buildPhases = (
-				1D4F5D8D15AE81A500369131 /* Sources */,
-				1D4F5D8E15AE81A500369131 /* Frameworks */,
-				1D4F5D8F15AE81A500369131 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JSBarrierOperationQueue;
-			productName = JSBarrierOperationQueue;
-			productReference = 1D4F5D9115AE81A500369131 /* JSBarrierOperationQueue.app */;
-			productType = "com.apple.product-type.application";
-		};
 		1D4F5DAB15AE81A500369131 /* JSBarrierOperationQueueTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D4F5DC115AE81A500369131 /* Build configuration list for PBXNativeTarget "JSBarrierOperationQueueTests" */;
@@ -175,7 +131,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1D4F5DB215AE81A500369131 /* PBXTargetDependency */,
 			);
 			name = JSBarrierOperationQueueTests;
 			productName = JSBarrierOperationQueueTests;
@@ -204,21 +159,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D4F5D9015AE81A500369131 /* JSBarrierOperationQueue */,
 				1D4F5DAB15AE81A500369131 /* JSBarrierOperationQueueTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D4F5D8F15AE81A500369131 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4F5DA015AE81A500369131 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D4F5DA915AE81A500369131 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,42 +192,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D4F5D8D15AE81A500369131 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4F5DA215AE81A500369131 /* main.m in Sources */,
-				1D4F5DA615AE81A500369131 /* JSAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D4F5DA715AE81A500369131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1D4F5DBB15AE81A500369131 /* JSBarrierOperationQueueTests.m in Sources */,
+				1D4F5DC715AE829F00369131 /* JSBarrierOperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1D4F5DB215AE81A500369131 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D4F5D9015AE81A500369131 /* JSBarrierOperationQueue */;
-			targetProxy = 1D4F5DB115AE81A500369131 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		1D4F5D9E15AE81A500369131 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D4F5D9F15AE81A500369131 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		1D4F5DB615AE81A500369131 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -340,32 +262,9 @@
 			};
 			name = Release;
 		};
-		1D4F5DBF15AE81A500369131 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
-				INFOPLIST_FILE = "JSBarrierOperationQueue/JSBarrierOperationQueue-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		1D4F5DC015AE81A500369131 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
-				INFOPLIST_FILE = "JSBarrierOperationQueue/JSBarrierOperationQueue-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		1D4F5DC215AE81A500369131 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JSBarrierOperationQueue.app/JSBarrierOperationQueue";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -374,6 +273,7 @@
 				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
 				INFOPLIST_FILE = "JSBarrierOperationQueueTests/JSBarrierOperationQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -382,7 +282,6 @@
 		1D4F5DC315AE81A500369131 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JSBarrierOperationQueue.app/JSBarrierOperationQueue";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -391,6 +290,7 @@
 				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
 				INFOPLIST_FILE = "JSBarrierOperationQueueTests/JSBarrierOperationQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -408,14 +308,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D4F5DBE15AE81A500369131 /* Build configuration list for PBXNativeTarget "JSBarrierOperationQueue" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D4F5DBF15AE81A500369131 /* Debug */,
-				1D4F5DC015AE81A500369131 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		1D4F5DC115AE81A500369131 /* Build configuration list for PBXNativeTarget "JSBarrierOperationQueueTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -423,6 +315,7 @@
 				1D4F5DC315AE81A500369131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
