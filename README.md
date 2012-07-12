@@ -43,7 +43,7 @@ $ make test
 
 ## Compatibility
 - Supports ARC.
-- Requires iOS4.0+
+- Compatible with iOS4.0+
 - Compatible with Mac OSX 10.6+
 
 ## Possible issues
