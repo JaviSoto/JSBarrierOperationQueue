@@ -19,7 +19,7 @@
 #import <objc/runtime.h>
 
 static char kJSBarrierOperationQueueBarrierOperationKey;
-static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperation";
+static const NSString *kJSBarrierOperationAssociatedObject = @"JSBarrierOperation";
 
 @interface NSOperation (Barrier)
 
@@ -41,19 +41,50 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
 
 @end
 
+@interface JSBarrierOperationQueue()
+{
+    dispatch_queue_t _internalSerialQueue;
+}
+@end
+
 @implementation JSBarrierOperationQueue
+
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        _internalSerialQueue = dispatch_queue_create("es.javisoto.barrieroperationqueue", DISPATCH_QUEUE_SERIAL);
+    }
+    
+    return self;
+}
+
+- (void)dealloc
+{
+    dispatch_release(_internalSerialQueue);
+    
+    #if !__has_feature(objc_arc)
+    [super dealloc];
+    #endif
+}
 
 #pragma mark - Public
 
 - (void)addBarrierOperation:(NSOperation *)operation
 {
-    @synchronized(self)
+    if (dispatch_get_current_queue() != _internalSerialQueue)
+    {
+        dispatch_sync(_internalSerialQueue, ^{
+            [self addBarrierOperation:operation];
+        });
+    }
+    else
     {
         [operation setIsBarrierOperation];
         
         for (NSOperation *op in self.operations)
         {
-            // Make this operation wait until the currently executing operations finish
+            // Make this operation wait until the all the operations in the queue finish
             if (!op.isExecuting)
                 [operation addDependency:op];
         }
@@ -83,7 +114,13 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
 
 - (void)addOperation:(NSOperation *)op
 {
-    @synchronized(self)
+    if (dispatch_get_current_queue() != _internalSerialQueue)
+    {
+        dispatch_sync(_internalSerialQueue, ^{
+            [self addOperation:op];
+        });
+    }
+    else
     {
         [self makeOperationDependOnAllBarrierOperations:op];
         
@@ -93,7 +130,13 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
 
 - (void)addOperations:(NSArray *)ops waitUntilFinished:(BOOL)wait
 {
-    @synchronized(self)
+    if (dispatch_get_current_queue() != _internalSerialQueue)
+    {
+        dispatch_sync(_internalSerialQueue, ^{
+            [self addOperations:ops waitUntilFinished:wait];
+        });
+    }
+    else
     {
         for (NSOperation *op in ops)
         {
@@ -106,7 +149,13 @@ static const NSString *kJSBarrierOperationAssociatedObject = @"kJSBarrierOperati
 
 - (void)addOperationWithBlock:(void (^)(void))block
 {
-    @synchronized(self)
+    if (dispatch_get_current_queue() != _internalSerialQueue)
+    {
+        dispatch_sync(_internalSerialQueue, ^{
+            [self addOperationWithBlock:block];
+        });
+    }
+    else
     {
         NSBlockOperation *blockOp = [NSBlockOperation blockOperationWithBlock:block];
         

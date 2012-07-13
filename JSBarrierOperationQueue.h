@@ -25,7 +25,7 @@
 - (void)addBarrierOperation:(NSOperation *)operation;
 
 /**
- * @param block it creates an operation which consists on running the provided block and behaves like the -addBarrierOperation: method
+ * @discussion creates an operation which consists on running the provided block and behaves like the -addBarrierOperation: method.
  */
 - (void)addBarrierOperationWithBlock:(void (^)(void))block;
 

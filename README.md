@@ -50,9 +50,6 @@ $ make test
 - Compatible with iOS4.0+
 - Compatible with Mac OSX 10.6+
 
-## Possible issues
-- ```NSOperationQueue``` is **thread safe**. Which means you can dispatch operations from different threads without worrying about locking. **I can't assure that behaviour is still present with the current implementation of ```JSBarrierOperationQueue```**.
-
 ## License
 Copyright 2012 [Javier Soto](http://twitter.com/javisoto) (ios@javisoto.es)
 
