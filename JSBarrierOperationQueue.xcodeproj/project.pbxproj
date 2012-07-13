@@ -10,7 +10,6 @@
 		1D4F5DAE15AE81A500369131 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5DAD15AE81A500369131 /* SenTestingKit.framework */; };
 		1D4F5DAF15AE81A500369131 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9515AE81A500369131 /* UIKit.framework */; };
 		1D4F5DB015AE81A500369131 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F5D9715AE81A500369131 /* Foundation.framework */; };
-		1D4F5DB815AE81A500369131 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4F5DB615AE81A500369131 /* InfoPlist.strings */; };
 		1D4F5DBB15AE81A500369131 /* JSBarrierOperationQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */; };
 		1D4F5DC715AE829F00369131 /* JSBarrierOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F5DC615AE829F00369131 /* JSBarrierOperationQueue.m */; };
 /* End PBXBuildFile section */
@@ -22,8 +21,6 @@
 		1D4F5DA315AE81A500369131 /* JSBarrierOperationQueue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSBarrierOperationQueue-Prefix.pch"; sourceTree = "<group>"; };
 		1D4F5DAC15AE81A500369131 /* JSBarrierOperationQueueTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSBarrierOperationQueueTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4F5DAD15AE81A500369131 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1D4F5DB515AE81A500369131 /* JSBarrierOperationQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSBarrierOperationQueueTests-Info.plist"; sourceTree = "<group>"; };
-		1D4F5DB715AE81A500369131 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBarrierOperationQueueTests.m; sourceTree = "<group>"; };
 		1D4F5DC515AE829F00369131 /* JSBarrierOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBarrierOperationQueue.h; sourceTree = SOURCE_ROOT; };
 		1D4F5DC615AE829F00369131 /* JSBarrierOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBarrierOperationQueue.m; sourceTree = SOURCE_ROOT; };
@@ -93,18 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				1D4F5DBA15AE81A500369131 /* JSBarrierOperationQueueTests.m */,
-				1D4F5DB415AE81A500369131 /* Supporting Files */,
 			);
 			path = JSBarrierOperationQueueTests;
-			sourceTree = "<group>";
-		};
-		1D4F5DB415AE81A500369131 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D4F5DB515AE81A500369131 /* JSBarrierOperationQueueTests-Info.plist */,
-				1D4F5DB615AE81A500369131 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1D4F5DC415AE81E400369131 /* JSBarrierOperationQueue */ = {
@@ -169,7 +156,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D4F5DB815AE81A500369131 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,17 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1D4F5DB615AE81A500369131 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D4F5DB715AE81A500369131 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D4F5DBC15AE81A500369131 /* Debug */ = {
@@ -271,7 +246,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
-				INFOPLIST_FILE = "JSBarrierOperationQueueTests/JSBarrierOperationQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -288,7 +262,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JSBarrierOperationQueue/JSBarrierOperationQueue-Prefix.pch";
-				INFOPLIST_FILE = "JSBarrierOperationQueueTests/JSBarrierOperationQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
