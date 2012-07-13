@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>JSBarrierOperationQueue by JaviSoto</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>JSBarrierOperationQueue</h1>
+          <h2>NSOperationQueue subclass that allows you to add operations that behave as a barrier. Basically providing the same functionality dispatch_barrier_async provides in the GCD world.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/JaviSoto/JSBarrierOperationQueue/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/JaviSoto/JSBarrierOperationQueue/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/JaviSoto/JSBarrierOperationQueue" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>JSBarrierOperationQueue</h2>
+
+<p><code>JSBarrierOperationQueue</code> is an <code>NSOperationQueue</code> subclass that allows you to add operations that behave as a barrier. Basically providing the same functionality <code>dispatch_barrier_async</code> provides in the <code>GCD</code> world.</p>
+
+<p>Quote from <code>dispatch_barrier_async</code> documentation:</p>
+
+<blockquote>
+<p>Calls to this function always return immediately after the block has been submitted and never wait for the block to be invoked. When the barrier block reaches the front of a private concurrent queue, it is not executed immediately. Instead, the queue waits until its currently executing blocks finish executing. At that point, the barrier block executes by itself. Any blocks submitted after the barrier block are not executed until the barrier block completes.</p>
+</blockquote>
+
+<h2>Usage</h2>
+
+<ul>
+<li>Clone the repository using</li>
+</ul><div class="highlight">
+<pre><span class="nv">$ </span>git clone https://github.com/JaviSoto/JSBarrierOperationQueue.git
+</pre>
+</div>
+
+
+<ul>
+<li>Add <code>JSBarrierOperationQueue.{h,m}</code> to your project.</li>
+<li>Create a <code>JSBarrierOperationQueue</code> just like you would create an <code>NSOperationQueue</code>.</li>
+<li>Submit operations using <code>-addOperation:</code>
+</li>
+<li>Submit <strong>barrier operations</strong> using:</li>
+</ul><div class="highlight">
+<pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addBarrierOperation:</span><span class="p">(</span><span class="n">NSOperation</span> <span class="o">*</span><span class="p">)</span><span class="nv">operation</span><span class="p">;</span>
+</pre>
+</div>
+
+
+<p>or</p>
+
+<div class="highlight">
+<pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addBarrierOperationWithBlock:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span>
+</pre>
+</div>
+
+
+<ul>
+<li>This behaves like <code>dispatch_barrier_async()</code> because it doesn't block the calling thread. If you want the same behaviour as <code>dispatch_barrier_sync</code>, you can just do:</li>
+</ul><div class="highlight">
+<pre><span class="n">JSBarrierOperationQueue</span> <span class="o">*</span><span class="n">queue</span> <span class="o">=</span> <span class="p">...</span>
+<span class="n">NSOperation</span> <span class="o">*</span><span class="n">operation</span> <span class="o">=</span> <span class="p">...</span>
+
+<span class="p">[</span><span class="n">queue</span> <span class="nl">addBarrierOperation:</span><span class="n">operation</span><span class="p">];</span>
+<span class="p">[</span><span class="n">operation</span> <span class="n">waitUntilFinished</span><span class="p">];</span>
+</pre>
+</div>
+
+
+<h2>Tests</h2>
+
+<ul>
+<li>You can run the tests with:</li>
+</ul><div class="highlight">
+<pre><span class="nv">$ </span>make <span class="nb">test</span>
+</pre>
+</div>
+
+
+<h2>Compatibility</h2>
+
+<ul>
+<li>Supports ARC.</li>
+<li>Compatible with iOS4.0+</li>
+<li>Compatible with Mac OSX 10.6+</li>
+</ul><h2>License</h2>
+
+<p>Copyright 2012 <a href="http://twitter.com/javisoto">Javier Soto</a> (<a href="mailto:ios@javisoto.es">ios@javisoto.es</a>)</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+ limitations under the License. </p>
+
+<p>Attribution is not required, but appreciated.</p>
+        </section>
+
+        <footer>
+          JSBarrierOperationQueue is maintained by <a href="https://github.com/JaviSoto">JaviSoto</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker(" UA-30545231-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
